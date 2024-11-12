@@ -7,6 +7,11 @@
         text-align: center;
         font-weight: bold;
         margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+            display: block;
+            margin-bottom: 0;
+        }
     }
 
     p {
@@ -16,6 +21,10 @@
     &__list {
         display: flex;
         justify-content: space-around;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
         
         &__item{
             text-align: center;

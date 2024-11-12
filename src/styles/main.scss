@@ -47,28 +47,52 @@ body{
 
 .text--big {
     @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
 }
 
 .text {
     @include text;
+
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px);
+    }
 }
 
 .tittle--big{
     @include tittle(44px);
     font-weight: bold;
+
+    @media (max-width: 768px) {
+        @include tittle(26px);
+    }
 }
 
 .tittle{
     @include tittle;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+        @include tittle(24px);
+    }
 }
 
 .tittle--small{
     @include tittle(28px);
+
+    @media (max-width: 768px) {
+        @include tittle(22px);
+    }
 }
 
 .link-text{
@@ -98,5 +122,11 @@ body{
         justify-content: center;
         left: 50%;
         width: calc(50% - 5.6vw);
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
     }
 }

@@ -4,6 +4,10 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media (max-width: 768px) {
+        display: block;
+    }
+
     img{
         max-width: 100%;
     }
