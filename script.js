@@ -2,7 +2,28 @@ document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');
 
-    
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function(){
+        const posicaoAtual = window.scrollY;
+        const btn = document.getElementById('btn-1');
+        const logo = document.getElementById('logo');
+        const bgHeader = document.getElementById('header');
+
+        if(posicaoAtual < alturaHero){
+            logo.classList.add('hidden');
+            btn.classList.add('hidden');
+            bgHeader.classList.add('hidden-bg');
+        } else {
+            logo.classList.remove('hidden');
+            btn.classList.remove('hidden');
+            bgHeader.classList.remove('hidden-bg');
+        }
+
+    })
+
+    // SECAO DE ATRACOES, PROGAMACAO DAS ABAS
     for (let i = 0; i < buttons.length; i++ ){
         buttons[i].addEventListener('click', function(botao){
             const abaAlvo = botao.target.dataset.tabButton;
@@ -16,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     }
 
+
+    // SECAO FAQ
     for(let i = 0; i < questions.length; i++){
         questions[i].addEventListener('click', abreOuFechaResposta)
     }

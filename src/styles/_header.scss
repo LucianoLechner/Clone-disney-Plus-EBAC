@@ -1,0 +1,89 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: variaveis.$corDeFundo;
+    transition: opacity, 0.5s ease;
+
+    &__container{
+        padding: 8px 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    &__logo{
+        max-width: 80px;
+        width: 100%;
+        transition: opacity, 0.5s ease;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__links{
+
+        display: flex;
+        align-items: center;
+
+        &__item{
+            margin: 5px;
+
+            &__btn1 {
+                padding: 15px 18px;
+                display: block;
+                width: auto;
+                height: auto;
+                font-size: 18px;
+                color: variaveis.$corTextoSecundario;
+                background-color: #0063e5;
+                text-transform: uppercase;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+                letter-spacing: 1px;
+                transition: opacity, 0.5s ease;
+
+                &:hover{
+                    background-color: lighten($color: #0063e5, $amount: 3%);
+                }
+            }
+
+            &__btn2 {
+                padding: 15px 18px;
+                display: block;
+                width: auto;
+                height: auto;
+                font-size: 18px;
+                color: variaveis.$corTextoSecundario;
+                background-color: rgba(0, 0, 0, 0.8);
+                text-transform: uppercase;
+                border-radius: 4px;
+                border: 1px solid variaveis.$corTextoPrincipal;
+                cursor: pointer;
+                text-decoration: none;
+                letter-spacing: 1px;
+
+                &:hover{
+                    background-color: white;
+                    color: black;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.hidden-bg{
+    background-color: transparent;
+}
